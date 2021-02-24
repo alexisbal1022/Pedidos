@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#FFAB00</color>
+  <color name="colorPrimaryDark">#E99D02</color>
+  <color name="colorAccent">#FFD600</color>
+  <color name="colorSnack">#DD2C00</color>
+  <color name="bgBottomNavigation">#fe485a</color>
+  <color name="verdetxt">#64DD17</color>
+  <color name="favoritono">#AAB1A6</color>
+  <color name="favoritosi">#F44336</color>
+</resources>

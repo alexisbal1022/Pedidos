@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.ProvinciaFragment">
+
+    <LinearLayout
+        android:background="#FFEB3B"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccione Provincia y Ciudad"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/sp_provincia"
+        android:layout_width="match_parent"
+        android:background="@drawable/spinner_personalizado"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/sp_ciudad"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/spinner_personalizado"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="cancelar"/>
+
+        <Button
+            android:id="@+id/btn_continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="continuar"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:id="@+id/aclogin"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/llProgressBar"
+        android:visibility="gone"
+        layout="@layout/pantalla_progreso"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:clickable="true"
+                android:elevation="25dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="14dp"
+                android:text="Cargando...."
+                android:elevation="25dp"
+                android:textColor="#D50000"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" >
+
+            </View>
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/view_login"
+                android:elevation="8dp">
+
+            </View>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="250dp"
+                android:layout_below="@id/view"
+                android:layout_marginTop="-20dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/boton_login"
+                android:elevation="10dp"
+                android:stateListAnimator="@null"
+                android:textColor="#FFFFFF"
+                android:text="iniciar sesion"
+                android:textSize="12sp" />
+
+
+            <ImageView
+                android:id="@+id/img_inicio"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/view"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                android:ems="10"
+                />
+
+            <EditText
+                android:id="@+id/txt_user"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/txt_login"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/txt_pswd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user"
+                android:layout_alignStart="@+id/txt_user"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/txt_login"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="numberPassword"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorPrimary" />
+
+            <Spinner
+                android:id="@+id/sp_provincia"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_pswd"
+                android:layout_alignStart="@+id/txt_user"
+                android:elevation="10dp"
+                android:background="@drawable/spinner_personalizado"
+                android:spinnerMode="dialog"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"/>
+
+            <Spinner
+                android:id="@+id/sp_ciudad"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sp_provincia"
+                android:layout_alignStart="@+id/txt_user"
+                android:elevation="10dp"
+                android:spinnerMode="dialog"
+                android:visibility="gone"
+                android:background="@drawable/spinner_personalizado"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/lbl_textoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_login"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true"
+                android:text="o"/>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/btn_loginfacebook"
+                android:layout_below="@id/lbl_textoo"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="7dp">
+            </com.facebook.login.widget.LoginButton>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_logingoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/btn_loginfacebook"/>
+
+            <LinearLayout
+                android:id="@+id/ly_registro"
+                android:layout_below="@id/olvide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Aún no estás en Pedidos Plus? "/>
+
+                <TextView
+                    android:id="@+id/registrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTRATE"
+                    android:textColor="#FF6D00"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/olvide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Olvidaste tu contraseña?"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFD600"
+                android:textStyle="bold"
+                android:layout_below="@+id/btn_logingoogle"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

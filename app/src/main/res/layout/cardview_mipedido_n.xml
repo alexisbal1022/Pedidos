@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <ImageButton
+                android:id="@+id/img_elimina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/img_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/txt_midetalle"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_more_vert_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/img_menos"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/txt_minumero"
+                android:layout_marginLeft="60dp"
+                android:src="@drawable/ic_remove_black_24dp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/img_mas"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/txt_minumero"
+                android:layout_marginLeft="80dp"
+                android:src="@drawable/ic_add_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_minumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:text="numero" />
+
+            <TextView
+                android:id="@+id/txt_mipedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:text="Producto"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_miprecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="precio" />
+
+            <TextView
+                android:id="@+id/txt_midetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_mipedido"
+                android:layout_marginLeft="110dp"
+                android:text="Detalle" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="#000000" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

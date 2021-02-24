@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Pedidos Plus</string>
+    <string name="title_activity_menu">Menú</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Mis Pedidos</string>
+    <string name="title_notifications">Mi Perfil</string>
+    <string name="title_historial">Historial</string>
+    <string name="title_favoritos">Favoritos</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <string name="facebook_app_id">3018236134879376</string>
+    <string name="fb_login_protocol_scheme">fb3018236134879376</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Login</string>
+    <string name="tab_text_1">INICIAR SESIÓN</string>
+    <string name="tab_text_2">REGISTRARSE</string>
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://app.pedidosplus.com/.well-known/assetlinks.json\" }]</string>
+</resources>

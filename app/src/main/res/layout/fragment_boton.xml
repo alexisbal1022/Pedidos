@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ly_btn"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/mi_pedidon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/boton_aceptar"
+        android:text="Ver mi pedido"/>
+
+</LinearLayout>

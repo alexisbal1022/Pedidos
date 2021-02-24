@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Olvide">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:elevation="20dp"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="20dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/view_login"
+                        android:elevation="8dp">
+
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/boton_login"
+                        android:elevation="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:stateListAnimator="@null"
+                        android:text="Ingrese su usuario"
+                        android:textSize="15sp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/con_olv_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="50dp"
+                        android:elevation="20dp">
+
+                        <EditText
+                            android:id="@+id/olv_usuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Usuario(Correo electrónico)"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/con_olv_usuario"
+                        android:elevation="20dp"
+                        android:layout_margin="30dp"
+                        android:text="Se enviará un mensaje con tu nueva contraseña al correo electrónico."/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/con_olv_contra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="110dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="50dp"
+                        android:elevation="10dp">
+
+                        <EditText
+                            android:id="@+id/olv_contra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nueva contraseña"
+                            android:inputType="numberPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/con_olv_ncontra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="170dp"
+                        android:layout_marginRight="50dp"
+                        android:elevation="10dp">
+
+                        <EditText
+                            android:id="@+id/olv_ncontra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Repite contraseña"
+                            android:inputType="numberPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/olv_cambia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boton_login"
+                android:text="Cambiar Contraseña" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

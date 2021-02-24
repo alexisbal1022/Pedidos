@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:id="@+id/coor_prod">
+
+    <include
+        android:id="@+id/llProgressBar"
+        layout="@layout/pantalla_progreso"
+        android:visibility="gone" />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_productos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtnpedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pedido N"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/ly_buscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:inputType="textCapCharacters"
+                    android:id="@+id/txt_buscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_redondo"
+                    android:hint="Buscar...................................."
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp" />
+
+                <Button
+                    android:id="@+id/btn_buscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/boton_aceptar"
+                    android:text="buscar"
+                    android:drawableRight="@drawable/ic_search_black_24dp"/>
+
+            </LinearLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_productos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ly_buscar"
+                android:layout_centerHorizontal="true">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_productos"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:id="@+id/pb_cargamas"/>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_vermas"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="ver mas"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/boton_aceptar"
+                android:layout_below="@id/recycler_productos"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_barp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/img_fondo"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical|top"
+                android:elevation="20dp" />
+
+            <TextView
+                android:id="@+id/lbl_contactos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom"/>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_boton"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
